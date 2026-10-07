@@ -1,0 +1,478 @@
+{
+  "contents": [
+    {
+      "bytes": 942,
+      "path": ".github/workflows/tests.yml",
+      "sha256": "b183068745d600fea2cd623265ebce6e9c413aefe044e726b92c66b5aa5bcbdd"
+    },
+    {
+      "bytes": 109,
+      "path": ".gitignore",
+      "sha256": "69eec6b79bdd5de6cc0735bf51e342c692c7a27dfbb1b7fc98b5647b85e3dea2"
+    },
+    {
+      "bytes": 1273,
+      "path": "AGENTS.md",
+      "sha256": "bf7c8a1a48f7947d91af530884ba2e2292c71d31839f67a3c7e6e688f8464686"
+    },
+    {
+      "bytes": 2476,
+      "path": "CONTRIBUTING.md",
+      "sha256": "9aaf42af97b18e5f96c359643f35648f30a8eff234546352b30bad116570d907"
+    },
+    {
+      "bytes": 9109,
+      "path": "LICENSE",
+      "sha256": "084f3f7f5bceb417253db07686926f5863e336353bbe7c04811965e48799e30b"
+    },
+    {
+      "bytes": 17971,
+      "path": "README.md",
+      "sha256": "aed9dca405bfab8b168bd0c0694328ab90c4299f7b48d215be8d6a18b3b4303d"
+    },
+    {
+      "bytes": 755,
+      "path": "aver_cass/__init__.py",
+      "sha256": "a132dbf2022f39ce1c0a43c3ceead7ff41ed76e64b1dda88bf768892ddc9c543"
+    },
+    {
+      "bytes": 6733,
+      "path": "aver_cass/core.py",
+      "sha256": "f7129eca9a86d02702efb934a11d69b886d52e7ee923f3b31699c51e3c995602"
+    },
+    {
+      "bytes": 5870,
+      "path": "aver_cass/evidence.py",
+      "sha256": "ef9361d0c0c526b6603315a0cbd8b5e1169f6839830279cf651d3f881027bd16"
+    },
+    {
+      "bytes": 22439,
+      "path": "aver_cass/verify.py",
+      "sha256": "b19c05fe0ecf2815980a44805c8e1564a938fbdd12506ec07550289228b9cfcf"
+    },
+    {
+      "bytes": 810,
+      "path": "aver_cli/__init__.py",
+      "sha256": "3d0ad14286e524b0bdb4e6dd3c20582577c2f00f8136aed9d699920453db5661"
+    },
+    {
+      "bytes": 214,
+      "path": "aver_cli/__main__.py",
+      "sha256": "09ee8cac76cf81b32b0d18d8dcece9fbd30f327c304db79e339d27d6da0b3c93"
+    },
+    {
+      "bytes": 45686,
+      "path": "aver_cli/cli.py",
+      "sha256": "f95374a64d389e1c56ec2a4fbc4a61cab19bdd2de154fc3da88c56b63451b33f"
+    },
+    {
+      "bytes": 51603,
+      "path": "aver_cli/decision.py",
+      "sha256": "845b9357de36712a83acac64e0d816d31d4f6921b3c5173738522d6fac87d106"
+    },
+    {
+      "bytes": 4158,
+      "path": "aver_cli/demo.py",
+      "sha256": "8022aa4473d17e7e0dd09182b25d6d615d76e3294bbf015892f5ce064671fbe8"
+    },
+    {
+      "bytes": 16513,
+      "path": "aver_cli/evidence.py",
+      "sha256": "51a0ab2b57bd0fc654e8847b3c9104bdd4e8db53e83d39cff3a8ff4f5ff19657"
+    },
+    {
+      "bytes": 0,
+      "path": "aver_cli/fixtures/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 8076,
+      "path": "aver_cli/fixtures/build_x10.py",
+      "sha256": "891a21276b349557329f6b95c927f74380e56b2a85c5ff8148f384dc1c3c6c2c"
+    },
+    {
+      "bytes": 47004,
+      "path": "aver_cli/fixtures/x10_escalation.json",
+      "sha256": "cfef78a26fae6c616589fd0a36b498a1d79a8f53631fb17f3781ccaabd44eab7"
+    },
+    {
+      "bytes": 28030,
+      "path": "aver_cli/fixtures/x10_refund.json",
+      "sha256": "cfdde507728b967ca549f4e6b23b5e7950bb3f4ffc5d567f4784c71b032bb5cf"
+    },
+    {
+      "bytes": 1957,
+      "path": "aver_cli/importers/__init__.py",
+      "sha256": "2c4b6b3cd83b9719e9385e3ae4816e8f274363a6d7714aa0fa574d857de9d213"
+    },
+    {
+      "bytes": 7792,
+      "path": "aver_cli/importers/base.py",
+      "sha256": "da6414ffe963061450fe673e7cfdc8d4edd5f1c69e2b83317498d496149cfd1e"
+    },
+    {
+      "bytes": 4486,
+      "path": "aver_cli/importers/generic.py",
+      "sha256": "82f8a61f1ff1391d9cb52616f870f23792f7894c042b3d35e3b01b3a9773897f"
+    },
+    {
+      "bytes": 4844,
+      "path": "aver_cli/importers/langfuse.py",
+      "sha256": "a5a7ac4451fc3f90b4a2c94cb9ac6d326a3a29027c9f2bba0a043282bd167bc3"
+    },
+    {
+      "bytes": 5356,
+      "path": "aver_cli/importers/langsmith.py",
+      "sha256": "dcb689d1d932fc241fb151e301c15f486cb46f895a734a77e10b25b8c62d11f6"
+    },
+    {
+      "bytes": 9092,
+      "path": "aver_cli/importers/otel.py",
+      "sha256": "a168a32c8ce4e92e24521dc6281807ac981d52ebaba1cea9933be3f7b023c307"
+    },
+    {
+      "bytes": 5743,
+      "path": "aver_cli/importers/promptfoo.py",
+      "sha256": "bfaf36288487c99ec13862565e5b2e215040d87ac7add61e0702f5f5087360a3"
+    },
+    {
+      "bytes": 12364,
+      "path": "aver_cli/policy.py",
+      "sha256": "8fdd69a7ba6922ec20fb1c9ce85414b5469c395020604f277bab56c0ef9d1706"
+    },
+    {
+      "bytes": 13686,
+      "path": "aver_cli/referee.py",
+      "sha256": "235f325229e194111e12c5fac48111e21a61d803e60d0919346ea03bee2f63aa"
+    },
+    {
+      "bytes": 0,
+      "path": "aver_cli/tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 2523,
+      "path": "aver_cli/tests/fixtures/jsonl/records.jsonl",
+      "sha256": "2c6dbf530158f0dcee3a290c8c3f7f28f260570b95e492e19358dc1ef102be6a"
+    },
+    {
+      "bytes": 14316,
+      "path": "aver_cli/tests/fixtures/langfuse/traces.json",
+      "sha256": "eb3e29b6668741a2303501d06f703136424fb07a38159f0bd8758cb9077d3a68"
+    },
+    {
+      "bytes": 13603,
+      "path": "aver_cli/tests/fixtures/langsmith/runs.jsonl",
+      "sha256": "4795213d4bcac3de7223e48db8298bc7f65c7ea6d0b9514c01f7e480bdfa32a2"
+    },
+    {
+      "bytes": 41811,
+      "path": "aver_cli/tests/fixtures/otel/traces.json",
+      "sha256": "b1145c049c44b7ca92f2366c415d7973ffff6781dbc191a8d25f4dede76e2cae"
+    },
+    {
+      "bytes": 13981,
+      "path": "aver_cli/tests/fixtures/promptfoo/results.json",
+      "sha256": "4d140f1e53e5b0b48c6242818eacc6bf4272fd67f4855238bd33c541038803e4"
+    },
+    {
+      "bytes": 1145,
+      "path": "aver_cli/tests/fixtures/record/demonstration.jws",
+      "sha256": "b3eac73940dc7707bc53610251bc0bf363b3a4dd752f0474f74bfa948adc24d8"
+    },
+    {
+      "bytes": 845,
+      "path": "aver_cli/tests/fixtures/record/did.json",
+      "sha256": "ef616c1a8cc4cccd19f38b37876a3ceec7c04dcaa809043f8b87c8715933f8c6"
+    },
+    {
+      "bytes": 2354,
+      "path": "aver_cli/tests/fixtures/record/envelope.json",
+      "sha256": "f6a934a8fcc0efa4eeb36e8c7c0d1efe69ca3c8978a7715a18af86a45d6bc170"
+    },
+    {
+      "bytes": 1120,
+      "path": "aver_cli/tests/fixtures/record/expired.jws",
+      "sha256": "931c3deddc62858089fa052de4163690f3cf55101391f7c38d5e02ff69461b72"
+    },
+    {
+      "bytes": 189,
+      "path": "aver_cli/tests/fixtures/record/jwks.json",
+      "sha256": "826bdc66b7af3b9cd92f96b9264c9f286220e570251982a7721987c081b2caa6"
+    },
+    {
+      "bytes": 1120,
+      "path": "aver_cli/tests/fixtures/record/record.jws",
+      "sha256": "13b11030a07824da0b6baf3a4788d036ee30b597187bbcf239195ad623ae0922"
+    },
+    {
+      "bytes": 19,
+      "path": "aver_cli/tests/fixtures/record/status_list_clear.json",
+      "sha256": "1f01847645a479e08a310e52261530c2809b62a143f4fc304b737301e04f4ab0"
+    },
+    {
+      "bytes": 28,
+      "path": "aver_cli/tests/fixtures/record/status_list_revoked.json",
+      "sha256": "e0ccd19a36ad65b3def8904646a87708be4719037400750f0b2e9e63fd797374"
+    },
+    {
+      "bytes": 31189,
+      "path": "aver_cli/tests/test_cli.py",
+      "sha256": "6b948497490ba56531252bc06465bdeea9594ffb12475d72c42e18d14b35e9b6"
+    },
+    {
+      "bytes": 4158,
+      "path": "aver_cli/tests/test_decision.py",
+      "sha256": "1324976d862b26b459b3a57ec0d8d09305062f41b4a4a41e126848104933a74d"
+    },
+    {
+      "bytes": 11113,
+      "path": "aver_cli/tests/test_decision_v2_cli.py",
+      "sha256": "2df1115162bb0750fd99469dc57782e6f817ca6d3f01d442f4cf29ed64bd0999"
+    },
+    {
+      "bytes": 8401,
+      "path": "aver_cli/tests/test_evidence.py",
+      "sha256": "3559b57e878fcc65b1c3c0161ec6cb647a78b85ac0abf50aba5594135cbded21"
+    },
+    {
+      "bytes": 16511,
+      "path": "aver_cli/tests/test_floor_stability.py",
+      "sha256": "9536f6275acf85f1c3138b9cb2740592a76da59893e6f2aaf34aafe0479b211a"
+    },
+    {
+      "bytes": 15838,
+      "path": "aver_cli/tests/test_importers.py",
+      "sha256": "fc423915478e629f478ec02787d5596314689e7f03409208ca0376afffbf40cb"
+    },
+    {
+      "bytes": 9221,
+      "path": "aver_cli/tests/test_repeat.py",
+      "sha256": "7d4b96782e7f37c45ab8d0d29f325080e1cc8b458f253a54f4a157868c1df292"
+    },
+    {
+      "bytes": 20664,
+      "path": "aver_cli/tests/test_verify.py",
+      "sha256": "cfebf0f13db41ec2bd11e94b75bda37398313b504c752606e5bc7e3ae94fe068"
+    },
+    {
+      "bytes": 5604,
+      "path": "aver_cli/tests/test_workflow_handoffs.py",
+      "sha256": "dd14280aab6a991390712bbffa25f50be073871c12352b2bf9f5f59da4ec1df2"
+    },
+    {
+      "bytes": 3981,
+      "path": "aver_cli/v3.py",
+      "sha256": "10efc708100a8ab00f8a6399899631e961e859e8ca401316657f83d249108aec"
+    },
+    {
+      "bytes": 46796,
+      "path": "aver_cli/workflow.py",
+      "sha256": "f0a73377c9aeb6f3fba94c5c55e32c1afb63c7eb0018edb19f8d50583d0a8826"
+    },
+    {
+      "bytes": 7825,
+      "path": "aver_policy/__init__.py",
+      "sha256": "c98243923390f5cd59dd32b74d187027d4b88d27fe5b6d1a207112aa0381c516"
+    },
+    {
+      "bytes": 50147,
+      "path": "aver_policy/bench.py",
+      "sha256": "4974945dde1f84db0d0cdb28327aadd9033f75c6410a3759a55e05116e7da359"
+    },
+    {
+      "bytes": 23057,
+      "path": "aver_policy/decision.py",
+      "sha256": "bd810b509d69ddcce5a9bbd70693f3c9472da1f8cf35518a0bdd745eeb4e9150"
+    },
+    {
+      "bytes": 2751,
+      "path": "aver_policy/decision_memo.py",
+      "sha256": "5dadefea46598d9d68d08c00dd3f243b362f1d3ad647e7e1b09e122b5f3e2f06"
+    },
+    {
+      "bytes": 91550,
+      "path": "aver_policy/decision_v2.py",
+      "sha256": "87b157ee17d78901916a9eb02d2d93dbb72dc424885077d2c001874775835eec"
+    },
+    {
+      "bytes": 53460,
+      "path": "aver_policy/engine.py",
+      "sha256": "a4eab4fb0825499ae02567362403d65a9e45c436766e4f631ebe29c8066af024"
+    },
+    {
+      "bytes": 5387,
+      "path": "aver_policy/evaluation_design.py",
+      "sha256": "1f07af2dcee800caa2928957dff661aa795767e8213cb98ae4c6f721748e25e6"
+    },
+    {
+      "bytes": 34840,
+      "path": "aver_policy/explain.py",
+      "sha256": "5488801cb8a1263f75250d3e740ad8fbba886e9be4d476b480467aa6a5d49dcd"
+    },
+    {
+      "bytes": 9840,
+      "path": "aver_policy/judge.py",
+      "sha256": "56c5c3944b17d4582c611c8cf22498d2f8f9a18824e4beb9cba55d80fb6ce6ea"
+    },
+    {
+      "bytes": 10109,
+      "path": "aver_policy/label_assistance.py",
+      "sha256": "a07991ed98bb738710986909c8b585952925b8f4f2b2236776ca092cee2bbb8d"
+    },
+    {
+      "bytes": 56278,
+      "path": "aver_policy/log_formats.py",
+      "sha256": "990c0719aad3897a42ad558ace5bc098cd358716ef1e56f0c92de5455662b88f"
+    },
+    {
+      "bytes": 90688,
+      "path": "aver_policy/log_reader.py",
+      "sha256": "df0397046060f88926eb55b4fc2f3dc2e614b41d35b0f7b5cb22f2b84af55125"
+    },
+    {
+      "bytes": 14509,
+      "path": "aver_policy/outcomes.py",
+      "sha256": "61cf2a4104939b1c30adcf2bf8427027dfa252a93225f3150879cb86db3dba16"
+    },
+    {
+      "bytes": 45054,
+      "path": "aver_policy/repeated.py",
+      "sha256": "b2464b1e2b9097790e82e4d592b4b0487e1be780a1aeedbb2c19ca9f0bd34e0f"
+    },
+    {
+      "bytes": 5256,
+      "path": "aver_policy/rewriter.py",
+      "sha256": "e62e89aae87387d42d1ff84471ed4e02f327c4ac036a78302e71fd6092d1427c"
+    },
+    {
+      "bytes": 11674,
+      "path": "aver_policy/savings_workflow.py",
+      "sha256": "b823be6c19e82c535580f76644675eec5bb20b4ff7fc788fbc4808357a0c27cf"
+    },
+    {
+      "bytes": 24060,
+      "path": "aver_policy/schema.py",
+      "sha256": "a50c1116dea32a3a385ceb28286818fafbdc670cc08e5aa491d16e26fc70d4e7"
+    },
+    {
+      "bytes": 18182,
+      "path": "aver_policy/schemas/decision-bundle.json",
+      "sha256": "b59bfe8a24dbc528c29959f970908092c5a0f4c2f8a5f441c255bba0abe1eb11"
+    },
+    {
+      "bytes": 18223,
+      "path": "aver_policy/schemas/decision-evidence.json",
+      "sha256": "6aab12af5d315b31ddc6070da6ef52fe2cbb263bf0535beaf871cb369f7b3c3f"
+    },
+    {
+      "bytes": 18187,
+      "path": "aver_policy/schemas/decision-frozen-plan.json",
+      "sha256": "fa019942e7332251d9ced5aabdcaca56490421c305442b2b4323df2936e6e9c7"
+    },
+    {
+      "bytes": 18178,
+      "path": "aver_policy/schemas/decision-plan.json",
+      "sha256": "f3bdeea427040ffda599ed16589fce2a041d8bd6c6c92ad4fa585de6d8d8d239"
+    },
+    {
+      "bytes": 18182,
+      "path": "aver_policy/schemas/decision-result.json",
+      "sha256": "4f17cc7d4256ca4ae62786929da86c1314fbcfe26688d304ebb626ab0fba27bb"
+    },
+    {
+      "bytes": 18178,
+      "path": "aver_policy/schemas/decision-spec.json",
+      "sha256": "3940aae60bbdcf971ccabb77ef9d66538d0f521f9359b7e508d864c6152bb313"
+    },
+    {
+      "bytes": 49977,
+      "path": "aver_policy/schemas/decision-v3-evidence.json",
+      "sha256": "da020403fa13af8e404c41f294c95760f69ee6cf5d0421c7873b4ee946473104"
+    },
+    {
+      "bytes": 49946,
+      "path": "aver_policy/schemas/decision-v3-explanation.json",
+      "sha256": "a4762606e7e33fd09a40ea6e74f5773504e0d364fc3a04b9271714fe4b434f1f"
+    },
+    {
+      "bytes": 49943,
+      "path": "aver_policy/schemas/decision-v3-frozen-plan.json",
+      "sha256": "a37ba325a70ab10d63fac1bf92392a1d6e0e44d85859b736c4d50ea0cf595e39"
+    },
+    {
+      "bytes": 49947,
+      "path": "aver_policy/schemas/decision-v3-grader-audit.json",
+      "sha256": "b14cb90d2585fe7982d7452c4de6d4f691136cdb5e2b2a5db831e7a0d2ad47c7"
+    },
+    {
+      "bytes": 49980,
+      "path": "aver_policy/schemas/decision-v3-hosted-look-create.json",
+      "sha256": "abc166ca16dfc13c7a5e2b657d856e8313b7166ffb57a84bff18edf7f6280cea"
+    },
+    {
+      "bytes": 49980,
+      "path": "aver_policy/schemas/decision-v3-hosted-plan-create.json",
+      "sha256": "0761614e691dd35060baa38137989adacd58b36fbc8d241883f3ef007c2d9067"
+    },
+    {
+      "bytes": 49947,
+      "path": "aver_policy/schemas/decision-v3-log-proposal.json",
+      "sha256": "ec4e0b9b32d6ee2718cab20fa10b8ab3c162266edf707b4b72eb44bb78234c5c"
+    },
+    {
+      "bytes": 49934,
+      "path": "aver_policy/schemas/decision-v3-plan.json",
+      "sha256": "449b2f4e4056b6150136da4c507c202c9c107fc8649a0b004bad9961b5dc6b5b"
+    },
+    {
+      "bytes": 49938,
+      "path": "aver_policy/schemas/decision-v3-result.json",
+      "sha256": "a4cb551d1eb8e7d7e26d9f700c5a1cfea7644a69dba54543993fc52e83195e04"
+    },
+    {
+      "bytes": 49934,
+      "path": "aver_policy/schemas/decision-v3-spec.json",
+      "sha256": "1e4cc7974367a8b3caa876d593464aad635c53f5757bb3593b2be093bad767b3"
+    },
+    {
+      "bytes": 3071,
+      "path": "aver_policy/scorers.py",
+      "sha256": "a3bbd3da568d8920fc8fa414852d87c8f23782c73ce8dc5473634ff22cca65c3"
+    },
+    {
+      "bytes": 10343,
+      "path": "aver_policy/variance.py",
+      "sha256": "07ddf472523c11f0ed5e4ebb3b374972be9a52add47633eb84ce30856e9275d1"
+    },
+    {
+      "bytes": 947418,
+      "path": "demo_data/agent_logs/invoice_ledger/logs.jsonl",
+      "sha256": "576d4005ac70987179f9a7d97b39c6ba973540af5e25662502a52a83c5d14b37"
+    },
+    {
+      "bytes": 89794,
+      "path": "demo_data/agent_logs/invoice_ledger/truth.jsonl",
+      "sha256": "11046ded9fe734d961fbc5e172ee029adddb8f0c9ac7da9e1237c9af80a28cfe"
+    },
+    {
+      "bytes": 294812,
+      "path": "demo_data/agent_logs/support_refund_otel/traces.json",
+      "sha256": "dcc9181dc953091fb7707a1f86993b668c08a36ff90183058c82d33ac3304d89"
+    },
+    {
+      "bytes": 10012,
+      "path": "docs/workflow.md",
+      "sha256": "d298c2ebf9c13cbc570b971a95addb1d4d1dadbed523659111be1bb14d04026b"
+    },
+    {
+      "bytes": 2140,
+      "path": "pyproject.toml",
+      "sha256": "13c90bd788e238a9f06660c55803cf73b3984d737801bebac5ce8fa7973723c5"
+    }
+  ],
+  "license": "Apache-2.0",
+  "repository": "vik1000-coder/aver-referee",
+  "schema": "aver-source-export/v1",
+  "source_revision": "92f7e4fe217ace5aefeb34da9c983932694cac59"
+}

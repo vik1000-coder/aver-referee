@@ -1,0 +1,1878 @@
+{
+ "resourceSpans": [
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "refund-agent"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "demo"
+     },
+     "spans": [
+      {
+       "spanId": "tkt_a-incumbent-0",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000001000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_a"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_a"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-incumbent-0-escalate",
+       "parentSpanId": "tkt_a-incumbent-0",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000001000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-incumbent-0-noop",
+       "parentSpanId": "tkt_a-incumbent-0",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000001000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-incumbent-1",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000002000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_a"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_a"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-incumbent-1-escalate",
+       "parentSpanId": "tkt_a-incumbent-1",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000002000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-incumbent-1-noop",
+       "parentSpanId": "tkt_a-incumbent-1",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000002000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-incumbent-2",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000003000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_a"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_a"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-incumbent-2-escalate",
+       "parentSpanId": "tkt_a-incumbent-2",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000003000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-incumbent-2-noop",
+       "parentSpanId": "tkt_a-incumbent-2",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000003000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-candidate-0",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000004000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_a"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "candidate"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m2-2026-09"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_a"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-candidate-0-escalate",
+       "parentSpanId": "tkt_a-candidate-0",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000004000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-candidate-0-noop",
+       "parentSpanId": "tkt_a-candidate-0",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000004000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-candidate-1",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000005000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_a"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "candidate"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m2-2026-09"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_a"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-candidate-1-escalate",
+       "parentSpanId": "tkt_a-candidate-1",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000005000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-candidate-1-noop",
+       "parentSpanId": "tkt_a-candidate-1",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000005000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-candidate-2",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000006000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_a"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "candidate"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m2-2026-09"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_a"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-candidate-2-escalate",
+       "parentSpanId": "tkt_a-candidate-2",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000006000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_a-candidate-2-noop",
+       "parentSpanId": "tkt_a-candidate-2",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000006000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-incumbent-0",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000007000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_b"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_b"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-incumbent-0-escalate",
+       "parentSpanId": "tkt_b-incumbent-0",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000007000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-incumbent-0-noop",
+       "parentSpanId": "tkt_b-incumbent-0",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000007000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-incumbent-1",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000008000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_b"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_b"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-incumbent-1-escalate",
+       "parentSpanId": "tkt_b-incumbent-1",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000008000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-incumbent-1-noop",
+       "parentSpanId": "tkt_b-incumbent-1",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000008000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-incumbent-2",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000009000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_b"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_b"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-incumbent-2-escalate",
+       "parentSpanId": "tkt_b-incumbent-2",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000009000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-incumbent-2-noop",
+       "parentSpanId": "tkt_b-incumbent-2",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000009000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-candidate-0",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000010000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_b"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "candidate"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m2-2026-09"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_b"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-candidate-0-escalate",
+       "parentSpanId": "tkt_b-candidate-0",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000010000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-candidate-0-issue_refund",
+       "parentSpanId": "tkt_b-candidate-0",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000010000000002",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-candidate-1",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000011000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_b"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "candidate"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m2-2026-09"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_b"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-candidate-1-escalate",
+       "parentSpanId": "tkt_b-candidate-1",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000011000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-candidate-1-issue_refund",
+       "parentSpanId": "tkt_b-candidate-1",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000011000000002",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-candidate-2",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000012000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_b"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "candidate"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m2-2026-09"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_b"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-candidate-2-escalate",
+       "parentSpanId": "tkt_b-candidate-2",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000012000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_b-candidate-2-issue_refund",
+       "parentSpanId": "tkt_b-candidate-2",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000012000000002",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-incumbent-0",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000013000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_c"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_c"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-incumbent-0-escalate",
+       "parentSpanId": "tkt_c-incumbent-0",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000013000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-incumbent-0-noop",
+       "parentSpanId": "tkt_c-incumbent-0",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000013000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-incumbent-1",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000014000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_c"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_c"
+         }
+        }
+       ],
+       "status": {
+        "code": "STATUS_CODE_ERROR"
+       }
+      },
+      {
+       "spanId": "tkt_c-incumbent-2",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000015000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_c"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_c"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-incumbent-2-escalate",
+       "parentSpanId": "tkt_c-incumbent-2",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000015000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-incumbent-2-noop",
+       "parentSpanId": "tkt_c-incumbent-2",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000015000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-candidate-0",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000016000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_c"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "candidate"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m2-2026-09"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_c"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-candidate-0-escalate",
+       "parentSpanId": "tkt_c-candidate-0",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000016000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-candidate-0-noop",
+       "parentSpanId": "tkt_c-candidate-0",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000016000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-candidate-1",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000017000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_c"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "candidate"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m2-2026-09"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_c"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-candidate-1-escalate",
+       "parentSpanId": "tkt_c-candidate-1",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000017000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-candidate-1-noop",
+       "parentSpanId": "tkt_c-candidate-1",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000017000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-candidate-2",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000018000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_c"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "candidate"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m2-2026-09"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_c"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-candidate-2-escalate",
+       "parentSpanId": "tkt_c-candidate-2",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000018000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_c-candidate-2-noop",
+       "parentSpanId": "tkt_c-candidate-2",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000018000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_d-incumbent-0",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000019000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_d"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_d"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_d-incumbent-0-escalate",
+       "parentSpanId": "tkt_d-incumbent-0",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000019000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_d-incumbent-0-noop",
+       "parentSpanId": "tkt_d-incumbent-0",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000019000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_d-incumbent-1",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000020000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_d"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_d"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_d-incumbent-1-escalate",
+       "parentSpanId": "tkt_d-incumbent-1",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000020000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_d-incumbent-1-noop",
+       "parentSpanId": "tkt_d-incumbent-1",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000020000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_d-incumbent-2",
+       "parentSpanId": "",
+       "name": "refund_agent",
+       "startTimeUnixNano": "1700000021000000000",
+       "attributes": [
+        {
+         "key": "aver.task_id",
+         "value": {
+          "stringValue": "tkt_d"
+         }
+        },
+        {
+         "key": "aver.side",
+         "value": {
+          "stringValue": "incumbent"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "acme-m1-2026-04"
+         }
+        },
+        {
+         "key": "gen_ai.input.messages",
+         "value": {
+          "stringValue": "customer opened tkt_d"
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_d-incumbent-2-escalate",
+       "parentSpanId": "tkt_d-incumbent-2",
+       "name": "escalate",
+       "startTimeUnixNano": "1700000021000000001",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "escalate"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": true
+         }
+        },
+        {
+         "key": "aver.tool.schema_valid",
+         "value": {
+          "boolValue": true
+         }
+        }
+       ]
+      },
+      {
+       "spanId": "tkt_d-incumbent-2-noop",
+       "parentSpanId": "tkt_d-incumbent-2",
+       "name": "issue_refund",
+       "startTimeUnixNano": "1700000021000000900",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "issue_refund"
+         }
+        },
+        {
+         "key": "aver.tool.executed",
+         "value": {
+          "boolValue": false
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

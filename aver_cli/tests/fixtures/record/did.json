@@ -1,0 +1,32 @@
+{
+ "@context": [
+  "https://www.w3.org/ns/did/v1",
+  "https://w3id.org/security/suites/jws-2020/v1"
+ ],
+ "assertionMethod": [
+  "did:web:aver.kovasystemsllc.com:api:verify#aver-b380d23c98580ebf"
+ ],
+ "id": "did:web:aver.kovasystemsllc.com:api:verify",
+ "service": [
+  {
+   "id": "did:web:aver.kovasystemsllc.com:api:verify#jwks",
+   "serviceEndpoint": "https://aver.kovasystemsllc.com/api/verify/jwks.json",
+   "type": "JsonWebKeySet"
+  }
+ ],
+ "verificationMethod": [
+  {
+   "controller": "did:web:aver.kovasystemsllc.com:api:verify",
+   "id": "did:web:aver.kovasystemsllc.com:api:verify#aver-b380d23c98580ebf",
+   "publicKeyJwk": {
+    "alg": "EdDSA",
+    "crv": "Ed25519",
+    "kid": "aver-b380d23c98580ebf",
+    "kty": "OKP",
+    "use": "sig",
+    "x": "RyqtjWdBRzi03PhTZmnG350EvH3dxiA3saCClazLhO0"
+   },
+   "type": "JsonWebKey2020"
+  }
+ ]
+}

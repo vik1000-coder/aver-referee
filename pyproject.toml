@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aver-referee"
+version = "0.1.0"
+description = "Compare agent options against your mistake prices and limits, with a test priced before it runs."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+keywords = ["agents", "evaluation", "tool-calls", "regression", "confidence-interval"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Testing",
+]
+
+# No runtime dependencies, by design (docs/104 §1). A locally built wheel must
+# install and run `aver demo` on a machine with nothing else installed and no
+# network.
+dependencies = []
+
+[project.optional-dependencies]
+# Ed25519 verification for `aver verify`. docs/104 §T-E2: the recommendation is an
+# optional extra rather than a pure-Python RFC 8032 implementation, so the core
+# tool stays dependency-free and a reviewer who only wants to verify a record
+# installs one well-known library.
+verify = ["cryptography>=42"]
+
+[project.scripts]
+aver = "aver_cli.cli:main"
+
+[tool.setuptools]
+include-package-data = false
+# The wheel's contents are exactly the three lift-able packages
+# (tests/test_aver_policy_is_standalone.py pins that they import nothing else).
+package-dir = { "" = "." }
+packages = [
+  "aver_policy",
+  "aver_cass",
+  "aver_cli",
+  "aver_cli.importers",
+  "aver_cli.fixtures",
+  "aver_cli.tests",
+]
+
+[tool.setuptools.package-data]
+"aver_policy" = ["schemas/*.json"]
+# The demo fixtures and the importer fixtures ship: `aver demo` must work offline
+# from a fresh install. The full source test suite also uses the separately
+# exported synthetic fixtures under demo_data/agent_logs.
+"aver_cli.fixtures" = ["*.json"]
+"aver_cli.tests" = ["fixtures/*/*.json", "fixtures/*/*.jsonl", "fixtures/*/*.jws"]
+
+[project.urls]
+Source = "https://github.com/vik1000-coder/aver-referee"

@@ -1,0 +1,28 @@
+name: Standalone CLI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install build '.[verify]'
+      - run: python -m unittest discover -s aver_cli/tests -t . -p 'test_*.py' -v
+      - run: python -m build --wheel
+      - name: Smoke the installed wheel outside the checkout
+        shell: bash
+        run: |
+          python -m venv "$RUNNER_TEMP/aver-wheel"
+          "$RUNNER_TEMP/aver-wheel/bin/python" -m pip install --no-index --no-deps dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/aver-wheel/bin/aver" decision capabilities --json
+          "$RUNNER_TEMP/aver-wheel/bin/aver" decision demo --rounds 3 --out-dir decision-demo

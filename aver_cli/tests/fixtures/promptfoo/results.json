@@ -1,0 +1,794 @@
+{
+ "version": 3,
+ "results": {
+  "results": [
+   {
+    "vars": {
+     "aver_task_id": "tkt_a",
+     "ticket": "customer opened tkt_a"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_a",
+     "ticket": "customer opened tkt_a"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_a",
+     "ticket": "customer opened tkt_a"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_a",
+     "ticket": "customer opened tkt_a"
+    },
+    "provider": {
+     "id": "harness:beta",
+     "label": "acme-m2-2026-09"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_a",
+     "ticket": "customer opened tkt_a"
+    },
+    "provider": {
+     "id": "harness:beta",
+     "label": "acme-m2-2026-09"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_a",
+     "ticket": "customer opened tkt_a"
+    },
+    "provider": {
+     "id": "harness:beta",
+     "label": "acme-m2-2026-09"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_b",
+     "ticket": "customer opened tkt_b"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_b",
+     "ticket": "customer opened tkt_b"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_b",
+     "ticket": "customer opened tkt_b"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_b",
+     "ticket": "customer opened tkt_b"
+    },
+    "provider": {
+     "id": "harness:beta",
+     "label": "acme-m2-2026-09"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      },
+      {
+       "function": {
+        "name": "issue_refund"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_b",
+     "ticket": "customer opened tkt_b"
+    },
+    "provider": {
+     "id": "harness:beta",
+     "label": "acme-m2-2026-09"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      },
+      {
+       "function": {
+        "name": "issue_refund"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_b",
+     "ticket": "customer opened tkt_b"
+    },
+    "provider": {
+     "id": "harness:beta",
+     "label": "acme-m2-2026-09"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      },
+      {
+       "function": {
+        "name": "issue_refund"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_c",
+     "ticket": "customer opened tkt_c"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_c",
+     "ticket": "customer opened tkt_c"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": false,
+    "error": "provider returned 500"
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_c",
+     "ticket": "customer opened tkt_c"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_c",
+     "ticket": "customer opened tkt_c"
+    },
+    "provider": {
+     "id": "harness:beta",
+     "label": "acme-m2-2026-09"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_c",
+     "ticket": "customer opened tkt_c"
+    },
+    "provider": {
+     "id": "harness:beta",
+     "label": "acme-m2-2026-09"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_c",
+     "ticket": "customer opened tkt_c"
+    },
+    "provider": {
+     "id": "harness:beta",
+     "label": "acme-m2-2026-09"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_d",
+     "ticket": "customer opened tkt_d"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_d",
+     "ticket": "customer opened tkt_d"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "vars": {
+     "aver_task_id": "tkt_d",
+     "ticket": "customer opened tkt_d"
+    },
+    "provider": {
+     "id": "harness:alpha",
+     "label": "acme-m1-2026-04"
+    },
+    "success": true,
+    "gradingResult": {
+     "componentResults": [
+      {
+       "pass": false,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "issue_refund"
+       }
+      },
+      {
+       "pass": true,
+       "assertion": {
+        "type": "trajectory:tool-used",
+        "value": "escalate"
+       }
+      }
+     ]
+    },
+    "response": {
+     "toolCalls": [
+      {
+       "function": {
+        "name": "escalate"
+       }
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

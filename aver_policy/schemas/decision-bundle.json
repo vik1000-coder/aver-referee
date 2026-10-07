@@ -1,0 +1,807 @@
+{
+  "$defs": {
+    "Bundle": {
+      "additionalProperties": false,
+      "properties": {
+        "authority": {
+          "enum": [
+            "local_assessment_only"
+          ]
+        },
+        "result": {
+          "$ref": "#/$defs/Result"
+        },
+        "schema": {
+          "enum": [
+            "aver-decision-bundle/v1"
+          ]
+        },
+        "sensitivity": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema",
+        "result",
+        "sensitivity",
+        "authority"
+      ],
+      "type": "object"
+    },
+    "Clause": {
+      "additionalProperties": false,
+      "properties": {
+        "cases": {
+          "maximum": 1000000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "estimate": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "key": {
+          "type": "string"
+        },
+        "limit": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "lower": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "metric": {
+          "enum": [
+            "failure",
+            "incident"
+          ]
+        },
+        "population": {
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "pass",
+            "refuse",
+            "block",
+            "review"
+          ]
+        },
+        "unknown": {
+          "maximum": 1000000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "upper": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "key",
+        "population",
+        "metric",
+        "estimate",
+        "lower",
+        "upper",
+        "limit",
+        "cases",
+        "unknown",
+        "state"
+      ],
+      "type": "object"
+    },
+    "Episode": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_id": {
+          "type": "string"
+        },
+        "case_id": {
+          "type": "string"
+        },
+        "case_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "completed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "configuration_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "cost_usd": {
+          "anyOf": [
+            {
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "incident": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "origin": {
+          "enum": [
+            "synthetic",
+            "external",
+            "customer"
+          ]
+        },
+        "phase": {
+          "enum": [
+            "pilot",
+            "confirmation"
+          ]
+        },
+        "schema": {
+          "enum": [
+            "aver-outcomes/v1"
+          ]
+        },
+        "stratum": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema",
+        "case_id",
+        "case_sha256",
+        "candidate_id",
+        "configuration_sha256",
+        "stratum",
+        "phase",
+        "origin",
+        "completed",
+        "incident",
+        "cost_usd"
+      ],
+      "type": "object"
+    },
+    "Exploration": {
+      "additionalProperties": false,
+      "properties": {
+        "pilot": {
+          "items": {
+            "$ref": "#/$defs/Episode"
+          },
+          "type": "array"
+        },
+        "ranking": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "candidate_id": {
+                "type": "string"
+              },
+              "execution_cost_usd": {
+                "anyOf": [
+                  {
+                    "maximum": 1000000,
+                    "minimum": 0,
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "failure_rate": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              },
+              "observed_eligible": {
+                "type": "boolean"
+              },
+              "score_usd": {
+                "anyOf": [
+                  {
+                    "minimum": 0,
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "candidate_id",
+              "observed_eligible",
+              "failure_rate",
+              "execution_cost_usd",
+              "score_usd"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "schema": {
+          "enum": [
+            "aver-exploration/v1"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "exploration_only"
+          ]
+        },
+        "spec": {
+          "$ref": "#/$defs/Spec"
+        }
+      },
+      "required": [
+        "schema",
+        "spec",
+        "pilot",
+        "ranking",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "Frozen": {
+      "additionalProperties": false,
+      "properties": {
+        "plan": {
+          "$ref": "#/$defs/Plan"
+        },
+        "plan_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "schema": {
+          "enum": [
+            "aver-frozen-plan/v1"
+          ]
+        }
+      },
+      "required": [
+        "schema",
+        "plan",
+        "plan_digest"
+      ],
+      "type": "object"
+    },
+    "Plan": {
+      "additionalProperties": false,
+      "properties": {
+        "cases_per_population": {
+          "maximum": 1000000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "confirmation_cases": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "case_id": {
+                "type": "string"
+              },
+              "stratum": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "case_id",
+              "stratum"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "confirmation_executions": {
+          "maximum": 1000000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "exploration": {
+          "$ref": "#/$defs/Exploration"
+        },
+        "feasible": {
+          "type": "boolean"
+        },
+        "method_version": {
+          "enum": [
+            "aver-decision-binary-v1"
+          ]
+        },
+        "minimum_cases_per_population": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pilot_executions": {
+          "maximum": 1000000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "schema": {
+          "enum": [
+            "aver-test-plan/v1"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "one_frozen_look_independent_binary_cases"
+          ]
+        },
+        "selected": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema",
+        "method_version",
+        "exploration",
+        "selected",
+        "pilot_executions",
+        "cases_per_population",
+        "confirmation_cases",
+        "confirmation_executions",
+        "minimum_cases_per_population",
+        "feasible",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "Report": {
+      "additionalProperties": false,
+      "properties": {
+        "candidates": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "candidate_id": {
+                "type": "string"
+              },
+              "clauses": {
+                "items": {
+                  "$ref": "#/$defs/Clause"
+                },
+                "type": "array"
+              },
+              "execution_usd_per_use": {
+                "anyOf": [
+                  {
+                    "maximum": 1000000,
+                    "minimum": 0,
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "modeled_usd_per_month": {
+                "anyOf": [
+                  {
+                    "minimum": 0,
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "state": {
+                "enum": [
+                  "pass",
+                  "refuse",
+                  "block",
+                  "review"
+                ]
+              }
+            },
+            "required": [
+              "candidate_id",
+              "state",
+              "clauses",
+              "execution_usd_per_use",
+              "modeled_usd_per_month"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "choice": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "lineage": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_digest": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "plan_digest": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "plan_digest",
+            "evidence_digest"
+          ],
+          "type": "object"
+        },
+        "method_version": {
+          "enum": [
+            "aver-decision-binary-v1"
+          ]
+        },
+        "next_actions": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "actor": {
+                "enum": [
+                  "engineer"
+                ]
+              },
+              "automatic_retry": {
+                "enum": [
+                  false
+                ]
+              },
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code",
+              "actor",
+              "automatic_retry"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "origin": {
+          "enum": [
+            "synthetic",
+            "external",
+            "customer"
+          ]
+        },
+        "progress": {
+          "additionalProperties": false,
+          "properties": {
+            "complete": {
+              "type": "boolean"
+            },
+            "received_executions": {
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "required_executions": {
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "received_executions",
+            "required_executions",
+            "complete"
+          ],
+          "type": "object"
+        },
+        "release_eligibility": {
+          "enum": [
+            "not_evaluated"
+          ]
+        },
+        "savings": {
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "not_evaluated"
+              ]
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "type": "object"
+        },
+        "scope": {
+          "enum": [
+            "local_assessment_of_declared_population"
+          ]
+        },
+        "verdict": {
+          "additionalProperties": false,
+          "properties": {
+            "reason_code": {
+              "type": "string"
+            },
+            "state": {
+              "enum": [
+                "pass",
+                "refuse",
+                "block",
+                "review"
+              ]
+            }
+          },
+          "required": [
+            "state",
+            "reason_code"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "method_version",
+        "verdict",
+        "choice",
+        "candidates",
+        "savings",
+        "release_eligibility",
+        "progress",
+        "lineage",
+        "origin",
+        "scope",
+        "next_actions",
+        "limitations"
+      ],
+      "type": "object"
+    },
+    "Result": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Episode"
+          },
+          "type": "array"
+        },
+        "frozen_plan": {
+          "$ref": "#/$defs/Frozen"
+        },
+        "report": {
+          "$ref": "#/$defs/Report"
+        },
+        "schema": {
+          "enum": [
+            "aver-decision-result/v1"
+          ]
+        }
+      },
+      "required": [
+        "schema",
+        "frozen_plan",
+        "evidence",
+        "report"
+      ],
+      "type": "object"
+    },
+    "Spec": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline": {
+          "type": "string"
+        },
+        "budget_runs": {
+          "maximum": 1000000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "candidates": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "digest": {
+                "pattern": "^[a-f0-9]{64}$",
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "digest"
+            ],
+            "type": "object"
+          },
+          "maxItems": 4,
+          "minItems": 2,
+          "type": "array"
+        },
+        "consequence_usd": {
+          "anyOf": [
+            {
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "definitions": {
+          "additionalProperties": false,
+          "properties": {
+            "completion": {
+              "type": "string"
+            },
+            "grader": {
+              "type": "string"
+            },
+            "incident": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "completion",
+            "incident",
+            "grader"
+          ],
+          "type": "object"
+        },
+        "monthly_uses": {
+          "maximum": 1000000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "population_statement": {
+          "type": "string"
+        },
+        "requirements": {
+          "additionalProperties": false,
+          "properties": {
+            "failure_limit": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "incident_limit": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            }
+          },
+          "required": [
+            "failure_limit",
+            "incident_limit"
+          ],
+          "type": "object"
+        },
+        "schema": {
+          "enum": [
+            "aver-decision-spec/v1"
+          ]
+        },
+        "scope": {
+          "additionalProperties": false,
+          "properties": {
+            "app": {
+              "type": "string"
+            },
+            "checkpoint": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "app",
+            "checkpoint"
+          ],
+          "type": "object"
+        },
+        "strata": {
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "failure_limit": {
+                "anyOf": [
+                  {
+                    "maximum": 1,
+                    "minimum": 0,
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "weight": {
+                "exclusiveMinimum": 0,
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              }
+            },
+            "required": [
+              "weight",
+              "failure_limit"
+            ],
+            "type": "object"
+          },
+          "maxProperties": 8,
+          "minProperties": 1,
+          "type": "object"
+        }
+      },
+      "required": [
+        "schema",
+        "scope",
+        "candidates",
+        "baseline",
+        "strata",
+        "definitions",
+        "requirements",
+        "monthly_uses",
+        "consequence_usd",
+        "budget_runs",
+        "population_statement"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "urn:aver:decision:bundle:v1",
+  "$ref": "#/$defs/Bundle",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Local decision artifact. Structural schema plus mandatory semantic validation by Aver; never a signed record."
+}

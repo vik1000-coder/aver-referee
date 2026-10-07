@@ -1,0 +1,768 @@
+[
+ {
+  "id": "tkt_a-incumbent-0",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:00:00Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_a"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_a",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_a-incumbent-0-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_a-incumbent-0-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_a-incumbent-1",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:01:00Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_a"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_a",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_a-incumbent-1-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_a-incumbent-1-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_a-incumbent-2",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:02:00Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_a"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_a",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_a-incumbent-2-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_a-incumbent-2-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_a-candidate-0",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:00:01Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_a"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_a",
+   "aver_side": "candidate",
+   "model": "acme-m2-2026-09"
+  },
+  "observations": [
+   {
+    "id": "tkt_a-candidate-0-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_a-candidate-0-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_a-candidate-1",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:01:01Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_a"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_a",
+   "aver_side": "candidate",
+   "model": "acme-m2-2026-09"
+  },
+  "observations": [
+   {
+    "id": "tkt_a-candidate-1-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_a-candidate-1-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_a-candidate-2",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:02:01Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_a"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_a",
+   "aver_side": "candidate",
+   "model": "acme-m2-2026-09"
+  },
+  "observations": [
+   {
+    "id": "tkt_a-candidate-2-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_a-candidate-2-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_b-incumbent-0",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:00:02Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_b"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_b",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_b-incumbent-0-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_b-incumbent-0-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_b-incumbent-1",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:01:02Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_b"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_b",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_b-incumbent-1-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_b-incumbent-1-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_b-incumbent-2",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:02:02Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_b"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_b",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_b-incumbent-2-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_b-incumbent-2-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_b-candidate-0",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:00:03Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_b"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_b",
+   "aver_side": "candidate",
+   "model": "acme-m2-2026-09"
+  },
+  "observations": [
+   {
+    "id": "tkt_b-candidate-0-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_b-candidate-0-issue_refund",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   }
+  ]
+ },
+ {
+  "id": "tkt_b-candidate-1",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:01:03Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_b"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_b",
+   "aver_side": "candidate",
+   "model": "acme-m2-2026-09"
+  },
+  "observations": [
+   {
+    "id": "tkt_b-candidate-1-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_b-candidate-1-issue_refund",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   }
+  ]
+ },
+ {
+  "id": "tkt_b-candidate-2",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:02:03Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_b"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_b",
+   "aver_side": "candidate",
+   "model": "acme-m2-2026-09"
+  },
+  "observations": [
+   {
+    "id": "tkt_b-candidate-2-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_b-candidate-2-issue_refund",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   }
+  ]
+ },
+ {
+  "id": "tkt_c-incumbent-0",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:00:04Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_c"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_c",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_c-incumbent-0-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_c-incumbent-0-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_c-incumbent-1",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:01:04Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_c"
+    }
+   ]
+  },
+  "level": "ERROR",
+  "metadata": {
+   "aver_task_id": "tkt_c",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": []
+ },
+ {
+  "id": "tkt_c-incumbent-2",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:02:04Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_c"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_c",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_c-incumbent-2-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_c-incumbent-2-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_c-candidate-0",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:00:05Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_c"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_c",
+   "aver_side": "candidate",
+   "model": "acme-m2-2026-09"
+  },
+  "observations": [
+   {
+    "id": "tkt_c-candidate-0-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_c-candidate-0-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_c-candidate-1",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:01:05Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_c"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_c",
+   "aver_side": "candidate",
+   "model": "acme-m2-2026-09"
+  },
+  "observations": [
+   {
+    "id": "tkt_c-candidate-1-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_c-candidate-1-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_c-candidate-2",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:02:05Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_c"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_c",
+   "aver_side": "candidate",
+   "model": "acme-m2-2026-09"
+  },
+  "observations": [
+   {
+    "id": "tkt_c-candidate-2-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_c-candidate-2-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_d-incumbent-0",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:00:06Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_d"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_d",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_d-incumbent-0-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_d-incumbent-0-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_d-incumbent-1",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:01:06Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_d"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_d",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_d-incumbent-1-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_d-incumbent-1-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ },
+ {
+  "id": "tkt_d-incumbent-2",
+  "name": "refund_agent",
+  "timestamp": "2026-09-22T04:02:06Z",
+  "input": {
+   "messages": [
+    {
+     "role": "user",
+     "content": "customer opened tkt_d"
+    }
+   ]
+  },
+  "level": "DEFAULT",
+  "metadata": {
+   "aver_task_id": "tkt_d",
+   "aver_side": "incumbent",
+   "model": "acme-m1-2026-04"
+  },
+  "observations": [
+   {
+    "id": "tkt_d-incumbent-2-escalate",
+    "type": "SPAN",
+    "name": "escalate",
+    "level": "DEFAULT",
+    "metadata": {
+     "aver_schema_valid": true
+    }
+   },
+   {
+    "id": "tkt_d-incumbent-2-fail",
+    "type": "SPAN",
+    "name": "issue_refund",
+    "level": "ERROR",
+    "statusMessage": "tool raised"
+   }
+  ]
+ }
+]

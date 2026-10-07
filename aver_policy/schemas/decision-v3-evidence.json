@@ -1,0 +1,2257 @@
+{
+  "$defs": {
+    "Allocation": {
+      "additionalProperties": true,
+      "properties": {
+        "final": {
+          "additionalProperties": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "mode": {
+          "enum": [
+            "clause",
+            "equal"
+          ]
+        },
+        "schedule": {
+          "additionalProperties": {
+            "items": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "type": "object"
+        },
+        "total": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "final",
+        "schedule",
+        "total",
+        "mode"
+      ],
+      "type": "object"
+    },
+    "ByMistake": {
+      "additionalProperties": false,
+      "properties": {
+        "cases": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "kind": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "lower": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "per_month": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "per_month_lower": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "per_month_upper": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "price_usd": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rate": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "state": {
+          "enum": [
+            "pass",
+            "block",
+            "refuse",
+            "continue",
+            "exhausted"
+          ]
+        },
+        "tolerance_per_month": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unknown": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "upper": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "kind",
+        "cases",
+        "count",
+        "unknown",
+        "rate",
+        "upper",
+        "lower",
+        "per_month",
+        "per_month_upper",
+        "per_month_lower",
+        "tolerance_per_month",
+        "price_usd"
+      ],
+      "type": "object"
+    },
+    "Candidate": {
+      "additionalProperties": false,
+      "properties": {
+        "digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "digest"
+      ],
+      "type": "object"
+    },
+    "CandidateSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "avg_lower": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "avg_upper": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "binding": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "by_mistake": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ByMistake"
+          },
+          "type": "object"
+        },
+        "candidate_id": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "clauses": {
+          "items": {
+            "$ref": "#/$defs/ClauseV3"
+          },
+          "type": "array"
+        },
+        "execution_usd_per_use": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kappa_usd": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "modeled_usd_per_month": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "modeled_usd_per_month_upper": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "paired": {
+          "$ref": "#/$defs/Paired"
+        },
+        "state": {
+          "enum": [
+            "pass",
+            "block",
+            "refuse",
+            "continue",
+            "exhausted"
+          ]
+        }
+      },
+      "required": [
+        "candidate_id",
+        "state",
+        "clauses",
+        "execution_usd_per_use",
+        "modeled_usd_per_month",
+        "modeled_usd_per_month_upper",
+        "binding"
+      ],
+      "type": "object"
+    },
+    "ClauseV3": {
+      "additionalProperties": false,
+      "properties": {
+        "cases": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "estimate": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": -1,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "key": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "kind": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "limit": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lower": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": -1,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "metric": {
+          "enum": [
+            "failure",
+            "incident",
+            "tolerance",
+            "paired"
+          ]
+        },
+        "population": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "pass",
+            "block",
+            "refuse",
+            "continue",
+            "exhausted"
+          ]
+        },
+        "unknown": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "upper": {
+          "maximum": 1,
+          "minimum": -1,
+          "type": "number"
+        }
+      },
+      "required": [
+        "key",
+        "population",
+        "metric",
+        "estimate",
+        "lower",
+        "upper",
+        "limit",
+        "cases",
+        "unknown",
+        "state"
+      ],
+      "type": "object"
+    },
+    "DecisionLookCreate": {
+      "additionalProperties": false,
+      "properties": {
+        "client_report": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReportV3"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "client_report_digest": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "look": {
+          "maximum": 5,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "rows": {
+          "items": {
+            "$ref": "#/$defs/Outcome"
+          },
+          "maxItems": 200000,
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "look",
+        "rows"
+      ],
+      "type": "object"
+    },
+    "DecisionPlanCreate": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ModelRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "candidate": {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "maxLength": 120,
+              "minLength": 1,
+              "type": "string"
+            },
+            "model": {
+              "maxLength": 160,
+              "minLength": 1,
+              "type": "string"
+            },
+            "provider": {
+              "maxLength": 80,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "type": "object"
+        },
+        "checkpoint_id": {
+          "maxLength": 120,
+          "minLength": 1,
+          "type": "string"
+        },
+        "frozen_plan": {
+          "$ref": "#/$defs/FrozenV3"
+        }
+      },
+      "required": [
+        "checkpoint_id",
+        "frozen_plan",
+        "candidate"
+      ],
+      "type": "object"
+    },
+    "Deployment": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "mode": {
+          "enum": [
+            "normal",
+            "agentic"
+          ]
+        }
+      },
+      "required": [
+        "mode",
+        "description"
+      ],
+      "type": "object"
+    },
+    "EconomicsInputs": {
+      "additionalProperties": false,
+      "properties": {
+        "current_failure_rate": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "deployment": {
+          "$ref": "#/$defs/Deployment"
+        },
+        "grader_audit": {
+          "$ref": "#/$defs/GraderAudit"
+        },
+        "grader_error": {
+          "$ref": "#/$defs/GraderError"
+        },
+        "horizon_months": {
+          "maximum": 120,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "label_cost_usd": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "paired_limit_per_month": {
+          "maximum": 1000000000.0,
+          "minimum": 0,
+          "type": "number"
+        },
+        "taxonomy": {
+          "$ref": "#/$defs/Taxonomy"
+        }
+      },
+      "required": [
+        "label_cost_usd",
+        "horizon_months",
+        "current_failure_rate",
+        "grader_error",
+        "taxonomy",
+        "deployment"
+      ],
+      "type": "object"
+    },
+    "Explanation": {
+      "additionalProperties": true,
+      "properties": {
+        "audit": {
+          "type": "object"
+        },
+        "caveats": {
+          "items": {},
+          "type": "array"
+        },
+        "headline": {
+          "type": "object"
+        },
+        "method_version": {
+          "type": "string"
+        },
+        "monthly_uses": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "schema": {
+          "enum": [
+            "aver-explanation/v1"
+          ]
+        },
+        "stopped": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "where_it_stands": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema",
+        "method_version",
+        "headline"
+      ],
+      "type": "object"
+    },
+    "Exploration": {
+      "additionalProperties": true,
+      "properties": {
+        "pilot": {
+          "items": {
+            "$ref": "#/$defs/Outcome"
+          },
+          "type": "array"
+        },
+        "ranking": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "schema": {
+          "enum": [
+            "aver-exploration/v1"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "exploration_only"
+          ]
+        },
+        "spec": {
+          "$ref": "#/$defs/SpecV1View"
+        }
+      },
+      "required": [
+        "schema",
+        "spec",
+        "pilot",
+        "ranking",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "FrozenV3": {
+      "additionalProperties": false,
+      "properties": {
+        "plan": {
+          "$ref": "#/$defs/PlanV3"
+        },
+        "plan_digest": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "schema": {
+          "enum": [
+            "aver-frozen-plan/v3"
+          ]
+        }
+      },
+      "required": [
+        "schema",
+        "plan",
+        "plan_digest"
+      ],
+      "type": "object"
+    },
+    "GraderAudit": {
+      "additionalProperties": false,
+      "description": "Two-phase audit (docs/129 \u00a73.5): AI-\"fine\" cases a person checked and how many had in fact failed; AI-flagged cases a person checked and how many were in fact fine. The older {sampled, false_negatives, false_positives} form is refused.",
+      "properties": {
+        "false_flags": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "kinds_checked": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "missed_failures": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "sampled_fine": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "sampled_flagged": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sampled_fine",
+        "missed_failures",
+        "sampled_flagged",
+        "false_flags"
+      ],
+      "type": "object"
+    },
+    "GraderError": {
+      "additionalProperties": false,
+      "properties": {
+        "false_negative": {
+          "exclusiveMaximum": 0.5,
+          "minimum": 0,
+          "type": "number"
+        },
+        "false_positive": {
+          "exclusiveMaximum": 0.5,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "false_negative",
+        "false_positive"
+      ],
+      "type": "object"
+    },
+    "Kind": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 120,
+          "minLength": 1,
+          "type": "string"
+        },
+        "price_usd": {
+          "anyOf": [
+            {
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "severity": {
+          "enum": [
+            "mistake",
+            "incident"
+          ]
+        },
+        "standard": {
+          "anyOf": [
+            {
+              "enum": [
+                "wrong_output",
+                "incomplete",
+                "needless_escalation",
+                "unwanted_action",
+                "harmful_output",
+                "runaway_cost"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tolerance_per_month": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "maximum": 1000000000.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "label",
+        "severity",
+        "price_usd",
+        "tolerance_per_month",
+        "standard"
+      ],
+      "type": "object"
+    },
+    "LogProposal": {
+      "additionalProperties": true,
+      "properties": {
+        "audit_sample": {
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "candidate_id": {
+                "maxLength": 240,
+                "minLength": 1,
+                "type": "string"
+              },
+              "case_id": {
+                "maxLength": 240,
+                "minLength": 1,
+                "type": "string"
+              },
+              "phase": {
+                "enum": [
+                  "fine",
+                  "flagged"
+                ]
+              }
+            },
+            "required": [
+              "candidate_id",
+              "case_id",
+              "phase"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "deployment": {
+          "additionalProperties": true,
+          "properties": {
+            "mode": {
+              "enum": [
+                "normal",
+                "agentic"
+              ]
+            }
+          },
+          "required": [
+            "mode"
+          ],
+          "type": "object"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "reader": {
+          "additionalProperties": true,
+          "properties": {
+            "name": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "version"
+          ],
+          "type": "object"
+        },
+        "rows": {
+          "items": {
+            "$ref": "#/$defs/Outcome"
+          },
+          "type": "array"
+        },
+        "schema": {
+          "enum": [
+            "aver-log-proposal/v1"
+          ]
+        },
+        "strata": {
+          "additionalProperties": {
+            "additionalProperties": true,
+            "properties": {
+              "weight": {
+                "exclusiveMinimum": 0,
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              }
+            },
+            "required": [
+              "weight"
+            ],
+            "type": "object"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "taxonomy": {
+          "$ref": "#/$defs/Taxonomy"
+        }
+      },
+      "required": [
+        "schema",
+        "purpose",
+        "deployment",
+        "strata",
+        "taxonomy",
+        "rows",
+        "audit_sample",
+        "reader"
+      ],
+      "type": "object"
+    },
+    "ModelRef": {
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "maxLength": 160,
+          "minLength": 1,
+          "type": "string"
+        },
+        "provider": {
+          "maxLength": 80,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "Outcome": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_id": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "case_id": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "case_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "completed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "configuration_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "cost_usd": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "incident": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mistake": {
+          "anyOf": [
+            {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "origin": {
+          "enum": [
+            "synthetic",
+            "external",
+            "customer",
+            "ai-labeled"
+          ]
+        },
+        "phase": {
+          "enum": [
+            "pilot",
+            "confirmation"
+          ]
+        },
+        "schema": {
+          "enum": [
+            "aver-outcomes/v2"
+          ]
+        },
+        "stratum": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema",
+        "case_id",
+        "case_sha256",
+        "candidate_id",
+        "configuration_sha256",
+        "stratum",
+        "phase",
+        "origin",
+        "completed",
+        "incident",
+        "cost_usd",
+        "mistake"
+      ],
+      "type": "object"
+    },
+    "Paired": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_only": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "candidate_usd_per_use": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cases": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "current_failure_rate": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "current_only": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "current_usd_per_use": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "delta": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": -1,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "delta_lower": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": -1,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "delta_upper": {
+          "maximum": 1,
+          "minimum": -1,
+          "type": "number"
+        },
+        "discordant": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "limit_per_month": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "per_month": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "per_month_lower": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "per_month_upper": {
+          "type": "number"
+        },
+        "saving_usd_per_month": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "saving_usd_per_month_lower": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "enum": [
+            "pass",
+            "block",
+            "refuse"
+          ]
+        },
+        "unknown": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "cases",
+        "discordant",
+        "candidate_only",
+        "current_only",
+        "delta",
+        "delta_upper",
+        "delta_lower",
+        "per_month_upper",
+        "per_month_lower",
+        "saving_usd_per_month_lower",
+        "state"
+      ],
+      "type": "object"
+    },
+    "PlanAudit": {
+      "additionalProperties": false,
+      "properties": {
+        "cost_usd": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fine_rows_needed": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "flagged_rows_suggested": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "for_limit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fine_rows_needed",
+        "for_limit",
+        "flagged_rows_suggested",
+        "cost_usd"
+      ],
+      "type": "object"
+    },
+    "PlanV3": {
+      "additionalProperties": false,
+      "properties": {
+        "allocation": {
+          "$ref": "#/$defs/Allocation"
+        },
+        "audit": {
+          "$ref": "#/$defs/PlanAudit"
+        },
+        "average_floor": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cap_total": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "confirmation_cases": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "case_id": {
+                "maxLength": 240,
+                "minLength": 1,
+                "type": "string"
+              },
+              "look": {
+                "maximum": 5,
+                "minimum": 1,
+                "type": "integer"
+              },
+              "stratum": {
+                "maxLength": 240,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "case_id",
+              "stratum",
+              "look"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "confirmation_executions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "economics_inputs": {
+          "$ref": "#/$defs/EconomicsInputs"
+        },
+        "exploration": {
+          "$ref": "#/$defs/Exploration"
+        },
+        "feasible": {
+          "type": "boolean"
+        },
+        "kappa": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "type": "object"
+        },
+        "looks": {
+          "maximum": 5,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "method_version": {
+          "enum": [
+            "aver-decision-binary-v3.1"
+          ]
+        },
+        "minimum_cases_per_population": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operating_characteristics": {
+          "description": "Monte Carlo planning output; informational and excluded from plan_digest.",
+          "type": "object"
+        },
+        "paired": {
+          "type": "boolean"
+        },
+        "pilot_executions": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "planning_incident_rate": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "saving_floor": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "schema": {
+          "enum": [
+            "aver-test-plan/v3"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "staged_looks_independent_binary_cases"
+          ]
+        },
+        "selected": {
+          "items": {
+            "maxLength": 240,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "spending": {
+          "items": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "tolerance_floors": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "schema",
+        "method_version",
+        "exploration",
+        "selected",
+        "economics_inputs",
+        "cap_total",
+        "looks",
+        "spending",
+        "allocation",
+        "planning_incident_rate",
+        "pilot_executions",
+        "confirmation_executions",
+        "paired",
+        "saving_floor",
+        "minimum_cases_per_population",
+        "average_floor",
+        "feasible",
+        "confirmation_cases",
+        "operating_characteristics",
+        "scope",
+        "tolerance_floors",
+        "kappa",
+        "audit"
+      ],
+      "type": "object"
+    },
+    "ReportAudit": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "applied": {
+              "enum": [
+                false
+              ]
+            },
+            "status": {
+              "enum": [
+                "required"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "applied"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "applied": {
+              "enum": [
+                false
+              ]
+            },
+            "status": {
+              "enum": [
+                "not_needed"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "applied"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "applied": {
+              "enum": [
+                true
+              ]
+            },
+            "audited_limit": {
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "maximum": 1,
+                    "minimum": 0,
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "type": "object"
+            },
+            "counts": {
+              "$ref": "#/$defs/GraderAudit"
+            },
+            "fine_rows_needed": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "message": {
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "applied"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "applied",
+            "counts",
+            "audited_limit"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "ReportV3": {
+      "additionalProperties": false,
+      "properties": {
+        "audit": {
+          "$ref": "#/$defs/ReportAudit"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/CandidateSummary"
+          },
+          "type": "array"
+        },
+        "choice": {
+          "anyOf": [
+            {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "deployment": {
+          "$ref": "#/$defs/Deployment"
+        },
+        "evidence_spent": {
+          "additionalProperties": false,
+          "properties": {
+            "cases": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "labels": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "usd": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "cases",
+            "labels",
+            "usd"
+          ],
+          "type": "object"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "lineage": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_digest": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "plan_digest": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "plan_digest",
+            "evidence_digest"
+          ],
+          "type": "object"
+        },
+        "look": {
+          "anyOf": [
+            {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "looks": {
+          "maximum": 5,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "method_version": {
+          "enum": [
+            "aver-decision-binary-v3.1"
+          ]
+        },
+        "next_actions": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "actor": {
+                "enum": [
+                  "engineer"
+                ]
+              },
+              "automatic_retry": {
+                "enum": [
+                  false
+                ]
+              },
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code",
+              "actor",
+              "automatic_retry"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "next_look_executions": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "origin": {
+          "enum": [
+            "synthetic",
+            "external",
+            "customer",
+            "ai-labeled"
+          ]
+        },
+        "progress": {
+          "additionalProperties": false,
+          "properties": {
+            "complete_look": {
+              "type": "boolean"
+            },
+            "planned_executions": {
+              "items": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "received_executions": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "received_executions",
+            "planned_executions",
+            "complete_look"
+          ],
+          "type": "object"
+        },
+        "release_eligibility": {
+          "enum": [
+            "not_evaluated"
+          ]
+        },
+        "savings": {
+          "$ref": "#/$defs/Savings"
+        },
+        "scope": {
+          "enum": [
+            "local_assessment_of_declared_population"
+          ]
+        },
+        "stopped": {
+          "enum": [
+            "pass",
+            "block",
+            "continue",
+            "exhausted",
+            "incomplete"
+          ]
+        },
+        "taxonomy_version": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "verdict": {
+          "additionalProperties": false,
+          "properties": {
+            "reason_code": {
+              "type": "string"
+            },
+            "state": {
+              "enum": [
+                "pass",
+                "refuse",
+                "block",
+                "review"
+              ]
+            }
+          },
+          "required": [
+            "state",
+            "reason_code"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "method_version",
+        "verdict",
+        "choice",
+        "candidates",
+        "look",
+        "looks",
+        "stopped",
+        "next_look_executions",
+        "evidence_spent",
+        "savings",
+        "release_eligibility",
+        "progress",
+        "lineage",
+        "origin",
+        "scope",
+        "next_actions",
+        "limitations",
+        "audit",
+        "taxonomy_version",
+        "deployment"
+      ],
+      "type": "object"
+    },
+    "ResultV3": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Outcome"
+          },
+          "type": "array"
+        },
+        "frozen_plan": {
+          "$ref": "#/$defs/FrozenV3"
+        },
+        "report": {
+          "$ref": "#/$defs/ReportV3"
+        },
+        "schema": {
+          "enum": [
+            "aver-decision-result/v3"
+          ]
+        }
+      },
+      "required": [
+        "schema",
+        "frozen_plan",
+        "evidence",
+        "report"
+      ],
+      "type": "object"
+    },
+    "Savings": {
+      "description": "docs/140 \u00a75: bounded only for a paired plan whose costs and prices are known; the difference in failures is bounded, running costs are observed averages. docs/148: estimated for an unpaired pass with known costs: point against current's pilot cost; lower from the candidate's upper bound on failures at the look's one-sided level. The recommendation says \"switch\" only when lower > 0.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "not_evaluated"
+              ]
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "candidate_id": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            "lower_usd_per_month": {
+              "type": "number"
+            },
+            "point_usd_per_month": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "status": {
+              "enum": [
+                "bounded"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "candidate_id",
+            "lower_usd_per_month",
+            "point_usd_per_month"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "candidate_id": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            "level": {
+              "exclusiveMaximum": 1,
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            "lower_usd_per_month": {
+              "type": "number"
+            },
+            "point_usd_per_month": {
+              "type": "number"
+            },
+            "status": {
+              "enum": [
+                "estimated"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "candidate_id",
+            "point_usd_per_month",
+            "lower_usd_per_month",
+            "level"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "SpecV1View": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "budget_runs": {
+          "maximum": 1000000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/Candidate"
+          },
+          "maxItems": 4,
+          "minItems": 2,
+          "type": "array"
+        },
+        "consequence_usd": {
+          "anyOf": [
+            {
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "definitions": {
+          "additionalProperties": false,
+          "properties": {
+            "completion": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            "grader": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            "incident": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "completion",
+            "incident",
+            "grader"
+          ],
+          "type": "object"
+        },
+        "monthly_uses": {
+          "maximum": 1000000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "population_statement": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "requirements": {
+          "additionalProperties": false,
+          "properties": {
+            "failure_limit": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "incident_limit": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            }
+          },
+          "required": [
+            "failure_limit",
+            "incident_limit"
+          ],
+          "type": "object"
+        },
+        "schema": {
+          "enum": [
+            "aver-decision-spec/v1"
+          ]
+        },
+        "scope": {
+          "additionalProperties": false,
+          "properties": {
+            "app": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            "checkpoint": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "app",
+            "checkpoint"
+          ],
+          "type": "object"
+        },
+        "strata": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Stratum"
+          },
+          "maxProperties": 8,
+          "minProperties": 1,
+          "type": "object"
+        }
+      },
+      "required": [
+        "schema",
+        "scope",
+        "candidates",
+        "baseline",
+        "strata",
+        "definitions",
+        "monthly_uses",
+        "consequence_usd",
+        "budget_runs",
+        "population_statement",
+        "requirements"
+      ],
+      "type": "object"
+    },
+    "SpecV3": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "budget_runs": {
+          "maximum": 1000000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/Candidate"
+          },
+          "maxItems": 4,
+          "minItems": 2,
+          "type": "array"
+        },
+        "consequence_usd": {
+          "anyOf": [
+            {
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "current_failure_rate": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "definitions": {
+          "additionalProperties": false,
+          "properties": {
+            "completion": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            "grader": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            "incident": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "completion",
+            "incident",
+            "grader"
+          ],
+          "type": "object"
+        },
+        "deployment": {
+          "$ref": "#/$defs/Deployment"
+        },
+        "grader_audit": {
+          "$ref": "#/$defs/GraderAudit"
+        },
+        "grader_error": {
+          "$ref": "#/$defs/GraderError"
+        },
+        "horizon_months": {
+          "maximum": 120,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "label_cost_usd": {
+          "anyOf": [
+            {
+              "maximum": 100000,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "monthly_uses": {
+          "maximum": 1000000,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "population_statement": {
+          "maxLength": 240,
+          "minLength": 1,
+          "type": "string"
+        },
+        "requirements": {
+          "additionalProperties": false,
+          "properties": {
+            "failure_limit": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "incident_limit": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "paired_limit_per_month": {
+              "anyOf": [
+                {
+                  "maximum": 1000000000.0,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "failure_limit",
+            "incident_limit"
+          ],
+          "type": "object"
+        },
+        "schema": {
+          "enum": [
+            "aver-decision-spec/v3"
+          ]
+        },
+        "scope": {
+          "additionalProperties": false,
+          "properties": {
+            "app": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            },
+            "checkpoint": {
+              "maxLength": 240,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "app",
+            "checkpoint"
+          ],
+          "type": "object"
+        },
+        "strata": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Stratum"
+          },
+          "maxProperties": 8,
+          "minProperties": 1,
+          "type": "object"
+        },
+        "taxonomy": {
+          "$ref": "#/$defs/Taxonomy"
+        }
+      },
+      "required": [
+        "schema",
+        "scope",
+        "candidates",
+        "baseline",
+        "strata",
+        "definitions",
+        "requirements",
+        "monthly_uses",
+        "consequence_usd",
+        "budget_runs",
+        "population_statement",
+        "label_cost_usd",
+        "horizon_months",
+        "current_failure_rate",
+        "grader_error",
+        "taxonomy",
+        "deployment"
+      ],
+      "type": "object"
+    },
+    "Stratum": {
+      "additionalProperties": false,
+      "properties": {
+        "failure_limit": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "weight": {
+          "exclusiveMinimum": 0,
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "weight",
+        "failure_limit"
+      ],
+      "type": "object"
+    },
+    "Taxonomy": {
+      "additionalProperties": false,
+      "properties": {
+        "kinds": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Kind"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "version": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "version",
+        "kinds"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "urn:aver:decision:evidence:v3",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Method aver-decision-binary-v3.1 (schema names keep /v3). Structural schema plus mandatory semantic validation by Aver. Local decision artifact; never a signed record.",
+  "items": {
+    "$ref": "#/$defs/Outcome"
+  },
+  "type": "array"
+}
